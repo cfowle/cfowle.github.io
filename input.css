@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Styling for the typing animation */
+.typing {
+font-size: 1.25rem; /* Matches text-xl */
+font-weight: 600; /* Matches font-semibold */
+white-space: nowrap;
+overflow: hidden;
+display: inline-block;
+}
+
+/* Blinking cursor effect */
+.cursor {
+display: inline-block;
+width: 2px;
+height: 1.25rem; /* Matches text-xl height */
+background-color: black;
+animation: blink 0.7s steps(2, start) infinite;
+vertical-align: middle;
+}
+
+@keyframes blink {
+0% {
+    opacity: 1;
+}
+50% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+/* Default label style */
+.cursor-pointer {
+color: black; /* Default text color */
+text-decoration: none; /* Remove underline by default */
+}
+
+/* Active label style */
+.active-label {
+    color: black; /* Keep the text color black */
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: blue; /* Make the underline blue */
+    text-underline-offset: 1em;
+}
+
+html {
+    scroll-padding-top: 4rem; /* Adjust based on the height of your nav bar */
+}
